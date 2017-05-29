@@ -4,6 +4,9 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 import lombok.Data;
 
+/**
+ * Model for mongo query parts
+ */
 @Data
 public class MongoQuery {
     private DBObject query;

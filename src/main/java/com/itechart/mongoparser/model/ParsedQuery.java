@@ -4,7 +4,9 @@ import lombok.Data;
 
 import java.util.List;
 
-
+/**
+ * Model for parsed and splitted SQL query.
+ */
 @Data
 public class ParsedQuery {
     private List<String> fields;
