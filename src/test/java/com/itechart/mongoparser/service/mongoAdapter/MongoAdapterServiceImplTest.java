@@ -1,4 +1,4 @@
-package com.itechart.mongoparser.service.mongoAdapted;
+package com.itechart.mongoparser.service.mongoAdapter;
 
 import com.itechart.mongoparser.model.MongoQuery;
 import com.itechart.mongoparser.model.ParsedQuery;
@@ -24,10 +24,10 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class MongoAdaptedServiceImplTest {
+public class MongoAdapterServiceImplTest {
 
     @InjectMocks
-    private MongoAdaptedService mongoAdaptedService = new MongoAdaptedServiceImpl();
+    private MongoAdapterService mongoAdapterService = new MongoAdapterServiceImpl();
     @Mock
     private SqlParserUtil sqlParserUtil;
     @Mock
@@ -53,7 +53,7 @@ public class MongoAdaptedServiceImplTest {
         when(dbCursorMock.limit(eq(testMongoQuery.getLimit()))).thenReturn(dbCursorMock);
         when(dbCursorMock.toArray()).thenReturn(expectedResult);
 
-        Collection<DBObject> result = mongoAdaptedService.convertSqlAndExecute(testQuery);
+        Collection<DBObject> result = mongoAdapterService.convertSqlAndExecute(testQuery);
         assertEquals(expectedResult, result);
     }
 

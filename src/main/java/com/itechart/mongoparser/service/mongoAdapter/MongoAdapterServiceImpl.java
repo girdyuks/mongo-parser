@@ -1,4 +1,4 @@
-package com.itechart.mongoparser.service.mongoAdapted;
+package com.itechart.mongoparser.service.mongoAdapter;
 
 import com.itechart.mongoparser.model.MongoQuery;
 import com.itechart.mongoparser.model.ParsedQuery;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MongoAdaptedServiceImpl implements MongoAdaptedService {
+public class MongoAdapterServiceImpl implements MongoAdapterService {
 
     @Autowired
     private SqlParserUtil sqlParserUtil;
