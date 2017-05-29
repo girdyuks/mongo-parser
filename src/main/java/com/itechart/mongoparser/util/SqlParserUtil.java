@@ -134,9 +134,9 @@ public class SqlParserUtil {
     }
 
     private List<DBObject> initOrStatements(ParsedQuery parsedQuery) {
-        List<String> splitterORStatement = Arrays.asList(parsedQuery.getWhereStatement().split(LOGICAL_OR_SPLIT_KEY));
+        List<String> splittedOrStatement = Arrays.asList(parsedQuery.getWhereStatement().split(LOGICAL_OR_SPLIT_KEY));
         List<DBObject> result = new ArrayList<>();
-        for (String orStatement : splitterORStatement) {
+        for (String orStatement : splittedOrStatement) {
             result.add(new BasicDBObject(LOGICAL_AND, initAndStatements(orStatement)));
         }
         return result;
