@@ -8,7 +8,7 @@
  [LIMIT <MaxRecords>]`
  
  где Projections может быть формата - `*`, `field`, `field.subfield`, `field.*`,
- Conditions - `=, <>, >, >=, <, <=`
+ Conditions - условия с `=, <>, >, >=, <, <=`
  
  Особенности : 
  1. Отсутствует валидация шаблона входного значения
